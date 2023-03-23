@@ -611,21 +611,35 @@ margin-right: 32px;
 margin-left: 32px;
 }
 .modal-close-icon {
-  width: 24px;
-  height: 24px;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: currentColor;
 }
 
 .modal-close {
   position: absolute;
   right: 24px;
   top: 24px;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(1, 0, 0, 0);
-  border-radius: 50%
-
+  background: #E7E9FC;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  align-items: center;
+height: 24px;
+width: 24px;
 }
 
 .modal-close:hover,
 .modal-close:focus {
   cursor: pointer;
+  background: var(--Pressed-state-color);
+  border-radius: 50%;
+  border-color: var(--Pressed-state-color);
+}
+
+.modal-close:is(:hover, :focus) {
+color: var(--Hero-text-color);
 }
